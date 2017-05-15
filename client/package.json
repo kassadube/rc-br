@@ -1,0 +1,19 @@
+{
+  "name": "rc-br",
+  "version": "1.0.0",
+  "description": "bursa manager",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kassadube/rc-br.git"
+  },
+  "author": "Noam Sharabi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kassadube/rc-br/issues"
+  },
+  "homepage": "https://github.com/kassadube/rc-br#readme"
+}
