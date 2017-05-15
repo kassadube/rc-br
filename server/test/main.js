@@ -13,7 +13,7 @@ import general from './general';
 thinky.dbReady().then(() => {
   // clean User table before starting tests
   test('Should clean DB', async (t) => {
-   // await r.db(dbConfig.db).table('User').delete();
+    await r.db(dbConfig.db).table('User').delete();
   //  await r.db(dbConfig.db).table('Question').delete();
     t.end();
   });
