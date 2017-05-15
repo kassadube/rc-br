@@ -4,7 +4,7 @@ import test from 'tape';
 // our packages
 import {r, thinky} from '../src/db';
 import {db as dbConfig} from '../config';
-import login from './login';
+//import login from './login';
 import register from './register';
 import general from './general';
 //import user from './user';
@@ -18,7 +18,7 @@ thinky.dbReady().then(() => {
     t.end();
   });
   register(test);
-  // login(test);
+ // login(test);
  //  user(test);
  // question(test);
   general(test);
