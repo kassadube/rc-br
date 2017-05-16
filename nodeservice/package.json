@@ -1,0 +1,17 @@
+{
+  "name": "nodeservice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "createWindowService.js",
+  "scripts": {
+    "start": "node createWindowService.js",
+    "start:site": "node createSiteWindowService.js",
+    "start:bursa:site": "node createBursaSiteWindowService.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-windows": "^0.1.14"
+  }
+}

@@ -12,6 +12,7 @@ import {auth as authConfig} from '../config';
 import {logger} from './util';
 
 import setupAuthRoutes from './auth';
+import setupActionRoutes from './dayaction';
 
 // init app
 const app = express();
@@ -49,6 +50,7 @@ app.get('/tauth', passport.authenticate('jwt', {session: false}), (req, res) => 
 
 
 setupAuthRoutes(app);
+setupActionRoutes(app);
 //setupUserRoutes(app);
 //setQuestionRoutes(app);
 

@@ -6,7 +6,9 @@ import {r, thinky} from '../src/db';
 import {db as dbConfig} from '../config';
 //import login from './login';
 import register from './register';
+import login from './login';
 import general from './general';
+import action from './action';
 //import user from './user';
 //import question from './question';
 
@@ -18,10 +20,11 @@ thinky.dbReady().then(() => {
     t.end();
   });
   register(test);
- // login(test);
+  login(test);
  //  user(test);
  // question(test);
   general(test);
+  action(test);
   
 // close db connection
   test((t) => {
