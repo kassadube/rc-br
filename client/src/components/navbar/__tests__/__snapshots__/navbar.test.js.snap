@@ -79,6 +79,18 @@ exports[`mount testing #navbar loged in user 1`] = `
             </a>
           </Link>
         </li>
+        <li>
+          <Link
+            onlyActiveOnIndex={false}
+            style={Object {}}
+            to="/logout">
+            <a
+              onClick={[Function]}
+              style={Object {}}>
+              logout
+            </a>
+          </Link>
+        </li>
       </ul>
     </div>
   </nav>
@@ -160,6 +172,18 @@ exports[`mount testing #navbar not loged in user 1`] = `
               style={Object {}} />
           </Link>
         </li>
+        <li>
+          <Link
+            onlyActiveOnIndex={false}
+            style={Object {}}
+            to="/logout">
+            <a
+              onClick={[Function]}
+              style={Object {}}>
+              logout
+            </a>
+          </Link>
+        </li>
       </ul>
     </div>
   </nav>
@@ -204,6 +228,11 @@ exports[`rendering testing #navbar loged in user RENDER 1`] = `
           test
         </a>
       </li>
+      <li>
+        <a>
+          logout
+        </a>
+      </li>
     </ul>
   </div>
 </nav>
@@ -244,6 +273,11 @@ exports[`rendering testing #navbar not loged in user RENDER 1`] = `
       class="nav navbar-nav navbar-right">
       <li>
         <a />
+      </li>
+      <li>
+        <a>
+          logout
+        </a>
       </li>
     </ul>
   </div>
@@ -301,6 +335,14 @@ exports[`test # Navbar at create 1`] = `
           style={Object {}}
           to="/profile/me" />
       </li>
+      <li>
+        <Link
+          onlyActiveOnIndex={false}
+          style={Object {}}
+          to="/logout">
+          logout
+        </Link>
+      </li>
     </ul>
   </div>
 </nav>
@@ -356,6 +398,14 @@ exports[`test # Navbar at home 1`] = `
           onlyActiveOnIndex={false}
           style={Object {}}
           to="/profile/me" />
+      </li>
+      <li>
+        <Link
+          onlyActiveOnIndex={false}
+          style={Object {}}
+          to="/logout">
+          logout
+        </Link>
       </li>
     </ul>
   </div>
@@ -413,6 +463,14 @@ exports[`test # Navbar at with user loged in 1`] = `
           style={Object {}}
           to="/profile/me">
           test
+        </Link>
+      </li>
+      <li>
+        <Link
+          onlyActiveOnIndex={false}
+          style={Object {}}
+          to="/logout">
+          logout
         </Link>
       </li>
     </ul>
