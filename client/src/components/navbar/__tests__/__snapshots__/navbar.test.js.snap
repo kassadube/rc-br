@@ -1,0 +1,421 @@
+exports[`mount testing #navbar loged in user 1`] = `
+<navbar
+  current="/profile/me"
+  user={
+    Object {
+      "login": "test",
+    }
+  }>
+  <nav
+    className="navbar navbar-default">
+    <div
+      className="container-fluid">
+      <div
+        className="navbar-header">
+        <Link
+          className="navbar-brand"
+          onlyActiveOnIndex={false}
+          style={Object {}}
+          to="/">
+          <a
+            className="navbar-brand"
+            onClick={[Function]}
+            style={Object {}}>
+            Brand
+          </a>
+        </Link>
+      </div>
+      <ul
+        className="nav navbar-nav">
+        <li>
+          <Link
+            onlyActiveOnIndex={false}
+            style={Object {}}
+            to="/other">
+            <a
+              onClick={[Function]}
+              style={Object {}}>
+              page Not Found
+            </a>
+          </Link>
+        </li>
+        <li
+          className="active">
+          <Link
+            onlyActiveOnIndex={false}
+            style={Object {}}
+            to="/">
+            <a
+              onClick={[Function]}
+              style={Object {}}>
+              Browse questions
+            </a>
+          </Link>
+        </li>
+        <li>
+          <Link
+            onlyActiveOnIndex={false}
+            style={Object {}}
+            to="/create">
+            <a
+              onClick={[Function]}
+              style={Object {}}>
+              Create new questions
+            </a>
+          </Link>
+        </li>
+      </ul>
+      <ul
+        className="nav navbar-nav navbar-right">
+        <li>
+          <Link
+            onlyActiveOnIndex={false}
+            style={Object {}}
+            to="/profile/me">
+            <a
+              onClick={[Function]}
+              style={Object {}}>
+              test
+            </a>
+          </Link>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</navbar>
+`;
+
+exports[`mount testing #navbar not loged in user 1`] = `
+<navbar
+  current="/profile/me"
+  user={Object {}}>
+  <nav
+    className="navbar navbar-default">
+    <div
+      className="container-fluid">
+      <div
+        className="navbar-header">
+        <Link
+          className="navbar-brand"
+          onlyActiveOnIndex={false}
+          style={Object {}}
+          to="/">
+          <a
+            className="navbar-brand"
+            onClick={[Function]}
+            style={Object {}}>
+            Brand
+          </a>
+        </Link>
+      </div>
+      <ul
+        className="nav navbar-nav">
+        <li>
+          <Link
+            onlyActiveOnIndex={false}
+            style={Object {}}
+            to="/other">
+            <a
+              onClick={[Function]}
+              style={Object {}}>
+              page Not Found
+            </a>
+          </Link>
+        </li>
+        <li
+          className="active">
+          <Link
+            onlyActiveOnIndex={false}
+            style={Object {}}
+            to="/">
+            <a
+              onClick={[Function]}
+              style={Object {}}>
+              Browse questions
+            </a>
+          </Link>
+        </li>
+        <li>
+          <Link
+            onlyActiveOnIndex={false}
+            style={Object {}}
+            to="/create">
+            <a
+              onClick={[Function]}
+              style={Object {}}>
+              Create new questions
+            </a>
+          </Link>
+        </li>
+      </ul>
+      <ul
+        className="nav navbar-nav navbar-right">
+        <li>
+          <Link
+            onlyActiveOnIndex={false}
+            style={Object {}}
+            to="/profile/me">
+            <a
+              onClick={[Function]}
+              style={Object {}} />
+          </Link>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</navbar>
+`;
+
+exports[`rendering testing #navbar loged in user RENDER 1`] = `
+<nav
+  class="navbar navbar-default">
+  <div
+    class="container-fluid">
+    <div
+      class="navbar-header">
+      <a
+        class="navbar-brand">
+        Brand
+      </a>
+    </div>
+    <ul
+      class="nav navbar-nav">
+      <li>
+        <a>
+          page Not Found
+        </a>
+      </li>
+      <li
+        class="active">
+        <a>
+          Browse questions
+        </a>
+      </li>
+      <li>
+        <a>
+          Create new questions
+        </a>
+      </li>
+    </ul>
+    <ul
+      class="nav navbar-nav navbar-right">
+      <li>
+        <a>
+          test
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+`;
+
+exports[`rendering testing #navbar not loged in user RENDER 1`] = `
+<nav
+  class="navbar navbar-default">
+  <div
+    class="container-fluid">
+    <div
+      class="navbar-header">
+      <a
+        class="navbar-brand">
+        Brand
+      </a>
+    </div>
+    <ul
+      class="nav navbar-nav">
+      <li>
+        <a>
+          page Not Found
+        </a>
+      </li>
+      <li
+        class="active">
+        <a>
+          Browse questions
+        </a>
+      </li>
+      <li>
+        <a>
+          Create new questions
+        </a>
+      </li>
+    </ul>
+    <ul
+      class="nav navbar-nav navbar-right">
+      <li>
+        <a />
+      </li>
+    </ul>
+  </div>
+</nav>
+`;
+
+exports[`test # Navbar at create 1`] = `
+<nav
+  className="navbar navbar-default">
+  <div
+    className="container-fluid">
+    <div
+      className="navbar-header">
+      <Link
+        className="navbar-brand"
+        onlyActiveOnIndex={false}
+        style={Object {}}
+        to="/">
+        Brand
+      </Link>
+    </div>
+    <ul
+      className="nav navbar-nav">
+      <li>
+        <Link
+          onlyActiveOnIndex={false}
+          style={Object {}}
+          to="/other">
+          page Not Found
+        </Link>
+      </li>
+      <li
+        className="active">
+        <Link
+          onlyActiveOnIndex={false}
+          style={Object {}}
+          to="/">
+          Browse questions
+        </Link>
+      </li>
+      <li>
+        <Link
+          onlyActiveOnIndex={false}
+          style={Object {}}
+          to="/create">
+          Create new questions
+        </Link>
+      </li>
+    </ul>
+    <ul
+      className="nav navbar-nav navbar-right">
+      <li>
+        <Link
+          onlyActiveOnIndex={false}
+          style={Object {}}
+          to="/profile/me" />
+      </li>
+    </ul>
+  </div>
+</nav>
+`;
+
+exports[`test # Navbar at home 1`] = `
+<nav
+  className="navbar navbar-default">
+  <div
+    className="container-fluid">
+    <div
+      className="navbar-header">
+      <Link
+        className="navbar-brand"
+        onlyActiveOnIndex={false}
+        style={Object {}}
+        to="/">
+        Brand
+      </Link>
+    </div>
+    <ul
+      className="nav navbar-nav">
+      <li>
+        <Link
+          onlyActiveOnIndex={false}
+          style={Object {}}
+          to="/other">
+          page Not Found
+        </Link>
+      </li>
+      <li
+        className="active">
+        <Link
+          onlyActiveOnIndex={false}
+          style={Object {}}
+          to="/">
+          Browse questions
+        </Link>
+      </li>
+      <li>
+        <Link
+          onlyActiveOnIndex={false}
+          style={Object {}}
+          to="/create">
+          Create new questions
+        </Link>
+      </li>
+    </ul>
+    <ul
+      className="nav navbar-nav navbar-right">
+      <li>
+        <Link
+          onlyActiveOnIndex={false}
+          style={Object {}}
+          to="/profile/me" />
+      </li>
+    </ul>
+  </div>
+</nav>
+`;
+
+exports[`test # Navbar at with user loged in 1`] = `
+<nav
+  className="navbar navbar-default">
+  <div
+    className="container-fluid">
+    <div
+      className="navbar-header">
+      <Link
+        className="navbar-brand"
+        onlyActiveOnIndex={false}
+        style={Object {}}
+        to="/">
+        Brand
+      </Link>
+    </div>
+    <ul
+      className="nav navbar-nav">
+      <li>
+        <Link
+          onlyActiveOnIndex={false}
+          style={Object {}}
+          to="/other">
+          page Not Found
+        </Link>
+      </li>
+      <li
+        className="active">
+        <Link
+          onlyActiveOnIndex={false}
+          style={Object {}}
+          to="/">
+          Browse questions
+        </Link>
+      </li>
+      <li>
+        <Link
+          onlyActiveOnIndex={false}
+          style={Object {}}
+          to="/create">
+          Create new questions
+        </Link>
+      </li>
+    </ul>
+    <ul
+      className="nav navbar-nav navbar-right">
+      <li>
+        <Link
+          onlyActiveOnIndex={false}
+          style={Object {}}
+          to="/profile/me">
+          test
+        </Link>
+      </li>
+    </ul>
+  </div>
+</nav>
+`;

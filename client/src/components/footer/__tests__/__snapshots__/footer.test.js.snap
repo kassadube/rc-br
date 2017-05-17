@@ -1,0 +1,52 @@
+exports[`rendering testing #footer  RENDER 1`] = `
+<footer
+  style="position:absolute;bottom:0px;width:100%;">
+  <div
+    class="row">
+    <div
+      class="col-xs-11 col-sm-9 col-md-7">
+      this is a footeraa
+    </div>
+  </div>
+</footer>
+`;
+
+exports[`rendering testing #navbar not loged in user RENDER 1`] = `
+<Component>
+  <footer
+    style={
+      Object {
+        "bottom": "0",
+        "position": "absolute",
+        "width": "100%",
+      }
+    }>
+    <div
+      className="row">
+      <div
+        className="col-xs-11 col-sm-9 col-md-7">
+        this is a footeraa
+      </div>
+    </div>
+  </footer>
+</Component>
+`;
+
+exports[`test # Footer 1`] = `
+<footer
+  style={
+    Object {
+      "bottom": "0",
+      "position": "absolute",
+      "width": "100%",
+    }
+  }>
+  <div
+    className="row">
+    <div
+      className="col-xs-11 col-sm-9 col-md-7">
+      this is a footeraa
+    </div>
+  </div>
+</footer>
+`;
