@@ -19,7 +19,7 @@ export const auth = (state = initialState, action) => {
         ...action.payload,
 
       };
-      case ActionTypes.DO_LOGOUT:
+    case ActionTypes.DO_LOGOUT:
       localStorage.removeItem('user.token');
       localStorage.removeItem('user.data');
       return {};
