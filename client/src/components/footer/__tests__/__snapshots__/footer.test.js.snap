@@ -5,7 +5,7 @@ exports[`rendering testing #footer  RENDER 1`] = `
     class="row">
     <div
       class="col-xs-11 col-sm-9 col-md-7">
-      this is a footeraa
+      this is a footeraadd
     </div>
   </div>
 </footer>
@@ -25,7 +25,7 @@ exports[`rendering testing #navbar not loged in user RENDER 1`] = `
       className="row">
       <div
         className="col-xs-11 col-sm-9 col-md-7">
-        this is a footeraa
+        this is a footeraadd
       </div>
     </div>
   </footer>
@@ -45,7 +45,7 @@ exports[`test # Footer 1`] = `
     className="row">
     <div
       className="col-xs-11 col-sm-9 col-md-7">
-      this is a footeraa
+      this is a footeraadd
     </div>
   </div>
 </footer>

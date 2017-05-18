@@ -22,14 +22,19 @@ class Logout extends Component {
   constructor() {
     super();
     this.state = {editing: false};
+   // const {navToHome} = this.props;
   }
   componentWillMount() {
     store.dispatch(logoutAction());
+    // setImmediate(() => this.props.navToHome());
+    store.dispatch(push('/'));
   }
 
   render() {
+    console.log(store.getState());
+    console.log(this.props);
     return (
-      <div />
+      <div>fff</div>
     );
   }
 }

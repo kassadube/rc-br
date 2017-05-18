@@ -13,6 +13,7 @@ import {syncHistoryWithStore} from 'react-router-redux';
 import Home from './pages/home';
 import Login from './pages/login';
 import Logout from './pages/logout';
+import Create from './pages/Create';
 import NotFound from './pages/notFound';
 import App from './app';
 import store from './store';
@@ -28,6 +29,7 @@ ReactDOM.render(
         <Route path="home" component={Home} />
         <Route path="login" component={Login} />
         <Route path="logout" component={Logout} />
+        <Route path="Create" component={Create} />
         <Route path="*" component={NotFound} />
       </Route>
     </Router>
