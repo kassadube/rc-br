@@ -11,7 +11,7 @@ create new working branch
 --------------------------------------
 
 git checkout -b nameofnewbranch
-git push --set-upstream branchName
+git push --set-upstream updateRouter
 
 after doing that need to make change
 --------------------------------------
