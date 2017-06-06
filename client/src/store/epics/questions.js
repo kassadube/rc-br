@@ -7,7 +7,7 @@ import 'rxjs';
 import * as ActionTypes from '../actionTypes';
 import {signRequest} from '../../util/signRequest';
 
-const server = 'localhost:8090';// '207.232.46.92:8090';//;
+const server = 'localhost:8070';// '207.232.46.92:8090';//;
 // LOGIN EPIC ACTION
 export const getAllQuestions = action$ => action$
   .ofType(ActionTypes.GET_ALL_QUESTIONS)

@@ -27,7 +27,7 @@ export default (test) => {
   });
   test('GET all day action', (t) => {
     request(app)
-      .get('/api/alldayaction')
+      .get('/api/dayaction')
       .set('x-access-token', app.get('token'))
       .expect(200)
       .expect('Content-Type', /json/)

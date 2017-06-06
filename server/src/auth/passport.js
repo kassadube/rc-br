@@ -20,7 +20,10 @@ passport.deserializeUser(async (id, done) => {
 
 
 passport.use(new LocalStrategy({usernameField: 'login'}, async (login, password, done) => {
+  console.log("PASSS login = " + login);
+  console.log("PASSS password = " + password);
   const users = await User.filter({login}).limit(1);
+  console.log("USERS = " + users);
   const user = users[0];
   if (!user) {
     return done(null, false);

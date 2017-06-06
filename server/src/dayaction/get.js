@@ -14,7 +14,7 @@ export default (app) => {
     }
   }));
   // get all actions
-  app.get('/api/alldayaction/', passport.authenticate('jwt', {session: false}), asyncRequest(async (req, res) => {
+  app.get('/api/dayaction/', passport.authenticate('jwt', {session: false}), asyncRequest(async (req, res) => {
     try {
       const actions = await DayAction.filter(q => (q('numOfAction').gt(0).or(q('numOfAction').eq(0)))).execute();
      /* const actions = await DayAction

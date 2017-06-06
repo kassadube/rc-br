@@ -10,7 +10,7 @@ export default (test) => {
   test('should login success test', (t) => {
     request(app)
     .post('/api/login')
-    .send({login: 'test', password: '123'})
+    .send({login: 'test', password: '123',rememberMe : 'false'})
     .expect(200)
     .expect('Content-Type', /json/)
     .end((err, res) => {
