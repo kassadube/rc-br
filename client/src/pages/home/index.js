@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 
 // import {getAllQuestionsAction, answerQuestionAction} from '../../store/actions';
 import Navbar from '../../components/navbar';
+import MyTable from '../../components/myTable';
 
 
 const mapStateToProps = state => ({
@@ -14,13 +15,17 @@ const mapStateToProps = state => ({
 // const mapDispatchToProps = dispatch => ({
 // });
 
-const Home = ({user}) =>
-   (
-     <div>
-       <Navbar user={user} />
-       <div />
-     </div>
+const Home = ({user}) => {
+  const dataSource = ['dd', 'frf'];
+  return (
+    <div>
+      <Navbar user={user} />
+      <div>
+         <MyTable colums={[2, 3, 4]} dataSource={dataSource} />
+       </div>
+    </div>
   );
+};
 
 Home.propTypes = {
   user: PropTypes.object,
