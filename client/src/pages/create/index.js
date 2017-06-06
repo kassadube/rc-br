@@ -3,11 +3,8 @@ import {connect} from 'react-redux';
 import {Link} from 'react-router';
 
 import {logoutAction} from '../../store/actions';
-<<<<<<< HEAD
 
-=======
 import Navbar from '../../components/navbar';
->>>>>>> f7903a4bd391a022c5c3c09345b7f2e924afbe91
 
 const mapStateToProps = state => ({
   user: state.auth.user,
@@ -36,9 +33,7 @@ class Create extends Component {
 
   render() {
     return (
-<<<<<<< HEAD
-      <div >ddddddd4ddd</div>
-=======
+
       <div>
         <Navbar user={this.props.user} />
         <div className="jumbotron">
@@ -88,7 +83,7 @@ class Create extends Component {
           </form>
         </div>
       </div>
->>>>>>> f7903a4bd391a022c5c3c09345b7f2e924afbe91
+
     );
   }
 }
