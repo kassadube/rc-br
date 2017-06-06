@@ -4,12 +4,13 @@ import PropTypes from 'prop-types';
 
 
 export default function myTable({colums, dataSource}) {
+  const tr = dataSource.map(itemData =>
+    <td>{itemData}</td>
+  );
   return (
     <table>
       <tr>
-        <td>ssss</td>
-        <td>54</td>
-        <td>ssss</td>
+        {tr}
       </tr>
     </table>
   );

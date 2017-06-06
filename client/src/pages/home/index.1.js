@@ -1,7 +1,9 @@
-import React, {Component} from 'react';
+import React from 'react';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
+// import _ from 'lodash';
 
+// import {getAllQuestionsAction, answerQuestionAction} from '../../store/actions';
 import Navbar from '../../components/navbar';
 import MyTable from '../../components/myTable';
 
@@ -12,24 +14,18 @@ const mapStateToProps = state => ({
 
 // const mapDispatchToProps = dispatch => ({
 // });
-class Home extends Component {
 
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-  render() {
-    const dataSource = ['dd', 'frf', 'rfrf'];
-    return (
+const Home = ({user}) => {
+  const dataSource = ['dd', 'frf'];
+  return (
+    <div>
+      <Navbar user={user} />
       <div>
-        <Navbar user={this.props.user} />
-        <div>
-          <MyTable colums={[2, 3, 4]} dataSource={dataSource} />
-        </div>
-      </div>
-    );
-  }
-}
+         <MyTable colums={[2, 3, 4]} dataSource={dataSource} />
+       </div>
+    </div>
+  );
+};
 
 Home.propTypes = {
   user: PropTypes.object,
