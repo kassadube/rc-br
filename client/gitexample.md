@@ -11,6 +11,7 @@ create new working branch
 --------------------------------------
 
 git checkout -b nameofnewbranch
+git push --set-upstream branchName
 
 after doing that need to make change
 --------------------------------------
