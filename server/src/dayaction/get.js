@@ -1,6 +1,6 @@
 import passport from 'passport';
 
-import {DayAction} from '../db';
+import {r, DayAction} from '../db';
 import {asyncRequest} from '../util';
 
 export default (app) => {
@@ -10,6 +10,22 @@ export default (app) => {
         .execute();
       res.send(action);
     } catch (e) {
+      res.status(400).send({error: 'User does not exist'});
+    }
+  }));
+  // get all actions
+  app.get('/api/alldayaction/', passport.authenticate('jwt', {session: false}), asyncRequest(async (req, res) => {
+    try {
+      const actions = await DayAction.filter(q => (q('numOfAction').gt(0).or(q('numOfAction').eq(0)))).execute();
+     /* const actions = await DayAction
+       .merge(q => ({
+         owner: 'gg',
+       }))
+      .execute();*/
+      console.log(`ACTIONS = ${ actions}`);
+      res.send(actions);
+    } catch (e) {
+      console.log(e);
       res.status(400).send({error: 'User does not exist'});
     }
   }));

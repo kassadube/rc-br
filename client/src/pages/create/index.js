@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
 import {logoutAction} from '../../store/actions';
-import store from '../../store';
 
 
 const mapStateToProps = state => ({
@@ -25,7 +24,7 @@ class Create extends Component {
 
   render() {
     return (
-      <div >ddddddd</div>
+      <div >ddddddd4ddd</div>
     );
   }
 }

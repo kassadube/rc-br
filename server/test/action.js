@@ -16,10 +16,38 @@ export default (test) => {
       .end((err, res) => {
         const actualBody = res.body;
         // delete actualBody.id;
+        console.log(`ID = ${actualBody.id}`);
+        app.set('ActionId', actualBody.id);
         t.error(err, 'No Error');
         t.equal(actualBody.change, sendData.change, 'retrieve same change');
         t.equal(actualBody.numOfAction, sendData.numOfAction, 'retrieve same change');
        // t.equal(moment(actualBody.buyingDate).isSame(sendData.buyingDate), true, 'retrieve same date');
+        t.end();
+      });
+  });
+  test('GET all day action', (t) => {
+    request(app)
+      .get('/api/alldayaction')
+      .set('x-access-token', app.get('token'))
+      .expect(200)
+      .expect('Content-Type', /json/)
+      .end((err, res) => {
+        const actualBody = res.body;
+        console.log(actualBody);
+
+        t.error(err, 'No Error');
+        t.equal(actualBody.length, 17, 'retrieve same array');
+        t.end();
+      });
+  });
+  test('delete day action', (t) => {
+    request(app)
+      .delete(`/api/dayaction/${app.get('ActionId')}`)
+       .set('x-access-token', app.get('token'))
+      // .send(sendData)
+      .expect(204)
+      .end((err) => {
+        t.error(err, 'No Error');
         t.end();
       });
   });
