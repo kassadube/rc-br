@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+import PropTypes from 'prop-types';
 
-import {logoutAction} from '../../store/actions';
+import {addDayAction} from '../../store/actions';
 
 import Navbar from '../../components/navbar';
 
@@ -10,14 +11,14 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  onLogout: () => dispatch(logoutAction()),
+  addDayClick: params => dispatch(addDayAction(params)),
 });
 
 
 class Create extends Component {
 
-  constructor(props, context) {
-    super(props, context);
+  constructor(props) {
+    super(props);
     this.state = {};
     // this.changeInput;
     // this.numOfActionInput;
@@ -26,7 +27,11 @@ class Create extends Component {
 
   handleClick(e) {
     e.preventDefault();
-    console.log(this.changeInput);
+    this.props.addDayClick({
+      change: this.changeInput.value,
+      numOfAction: this.numOfActionInput.value,
+      buyingDate: this.buyingDateInput.value,
+    });
   }
 
   render() {
@@ -86,4 +91,10 @@ class Create extends Component {
   }
 }
 
+Create.propTypes = {
+  user: PropTypes.object,
+};
+Create.defaultProps = {
+  user: {},
+};
 export default connect(mapStateToProps, mapDispatchToProps)(Create);

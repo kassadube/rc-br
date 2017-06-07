@@ -1,11 +1,11 @@
 import {helloWorld} from './helloWorld';
 import {auth} from './auth';
-import {questions} from './questions';
+import {dayActions} from './dayActions';
 import {users} from './users';
 
 export default {
   helloWorld,
   auth,
-  questions,
+  dayActions,
   users,
 };

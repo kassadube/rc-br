@@ -7,8 +7,8 @@ import {asyncRequest} from '../util';
 export default (app) => {
   app.post('/api/dayAction/', passport.authenticate('jwt', {session: false}), asyncRequest(async (req, res) => {
      // get user input
-     console.log("GGGGGGGGGGGGGGGGGGGGGGGGGG");
-    const {change, numOfAction, dateOfAction} = req.body;
+     console.log(req.body);
+    const {change, numOfAction, buyingDate} = req.body;
 
     // make sure text is not empty
     /* if (!text || !text.length) {
@@ -17,7 +17,7 @@ export default (app) => {
     }*/
 
     // validate date
-    if (!moment(dateOfAction, moment.ISO_8601).isValid()) {
+    if (!moment(buyingDate, moment.ISO_8601).isValid()) {
       res.status(400).send({error: 'Date should be valid ISO Date!'});
       return;
     }
@@ -25,7 +25,7 @@ export default (app) => {
     // save new question
     const action = new DayAction({
       change,
-      buyingDate: moment(dateOfAction).toDate(),
+      buyingDate: moment(buyingDate).toDate(),
       numOfAction,
     });
     // try add action

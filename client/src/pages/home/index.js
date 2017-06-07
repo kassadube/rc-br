@@ -2,29 +2,40 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 
+import {getAllDayAction} from '../../store/actions';
+
 import Navbar from '../../components/navbar';
 import MyTable from '../../components/myTable';
 
 
 const mapStateToProps = state => ({
   user: state.auth.user,
+  actions: state.dayActions.actions,
 });
 
-// const mapDispatchToProps = dispatch => ({
-// });
+const mapDispatchToProps = dispatch => ({
+  getAllDayActions: () => dispatch(getAllDayAction()),
+});
+
 class Home extends Component {
 
   constructor(props) {
     super(props);
     this.state = {};
+    this.schema = [
+    {key: 'buyingDate', label: 'Date', type: 'date'},
+    {key: 'change', label: 'Daily Change', type: 'number'},
+    {key: 'numOfAction', label: '# of actions', type: 'number'},
+    ];
+    props.getAllDayActions();
+   // setImmediate(() => props.getAllDayActions());
   }
   render() {
-    const dataSource = ['dd', 'frf', 'rfrf', 'ff'];
     return (
       <div>
         <Navbar user={this.props.user} />
         <div>
-          <MyTable colums={[2, 3, 4]} dataSource={dataSource} />
+          <MyTable schema={this.schema} rows={this.props.actions} />
         </div>
       </div>
     );
@@ -33,8 +44,12 @@ class Home extends Component {
 
 Home.propTypes = {
   user: PropTypes.object,
+  actions: PropTypes.array,
+  getAllDayActions: PropTypes.func,
 };
 Home.defaultProps = {
   user: {},
+  actions: [],
+  getAllDayActions: e => e,
 };
-export default connect(mapStateToProps)(Home);
+export default connect(mapStateToProps, mapDispatchToProps)(Home);

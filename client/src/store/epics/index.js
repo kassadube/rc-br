@@ -1,6 +1,6 @@
 import {helloWorld} from './helloWorld';
 import {login, register} from './auth';
-import {getAllQuestions, answerQuestion, addQuestion} from './questions';
+import {getAllDays, addDay} from './dayActions';
 import {getUser, updateUser} from './users';
 
 export default [
@@ -8,9 +8,8 @@ export default [
   login,
   register,
   helloWorld,
-  getAllQuestions,
-  answerQuestion,
-  addQuestion,
+  getAllDays,
   getUser,
+  addDay,
   updateUser,
 ];

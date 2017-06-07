@@ -16,8 +16,13 @@ export const registerAction = payload => ({
   payload,
 });
 
-export const getAllQuestionsAction = () => ({
-  type: ActionTypes.GET_ALL_QUESTIONS,
+export const getAllDayAction = () => ({
+  type: ActionTypes.GET_ALL_DAYS,
+});
+
+export const addDayAction = payload => ({
+  type: ActionTypes.ADD_DAY,
+  payload,
 });
 
 export const answerQuestionAction = payload => ({

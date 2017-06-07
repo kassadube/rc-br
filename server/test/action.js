@@ -6,6 +6,7 @@ import app from '../src/app';
 
 export default (test) => {
   const sendData = {change: 500, numOfAction: 5, dateOfAction: moment().add(1, 'days').toDate()};
+  const sendDataDate = {change: 500, numOfAction: 5, dateOfAction: '2017-06-04'};
   test('add new day action', (t) => {
     request(app)
       .post('/api/dayaction')
@@ -48,6 +49,25 @@ export default (test) => {
       .expect(204)
       .end((err) => {
         t.error(err, 'No Error');
+        t.end();
+      });
+  });
+
+  test('add new day action with string data', (t) => {
+    request(app)
+      .post('/api/dayaction')
+       .set('x-access-token', app.get('token'))
+      .send(sendDataDate)
+      .expect(200)
+      .expect('Content-Type', /json/)
+      .end((err, res) => {
+        const actualBody = res.body;
+        // delete actualBody.id;
+        console.log(`ID = ${actualBody.id}`);
+        t.error(err, 'No Error');
+        t.equal(actualBody.change, sendData.change, 'retrieve same change');
+        t.equal(actualBody.numOfAction, sendData.numOfAction, 'retrieve same change');
+       // t.equal(moment(actualBody.buyingDate).isSame(sendData.buyingDate), true, 'retrieve same date');
         t.end();
       });
   });
