@@ -19,7 +19,7 @@ class Home extends Component {
     this.state = {};
   }
   render() {
-    const dataSource = ['dd', 'frf', 'rfrf'];
+    const dataSource = ['dd', 'frf', 'rfrf', 'ff'];
     return (
       <div>
         <Navbar user={this.props.user} />

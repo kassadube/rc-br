@@ -16,7 +16,7 @@ const mapStateToProps = state => ({
 // });
 
 const Home = ({user}) => {
-  const dataSource = ['dd', 'frf'];
+ 
   return (
     <div>
       <Navbar user={user} />
