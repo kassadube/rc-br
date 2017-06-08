@@ -40,7 +40,7 @@ export default function myTable({schema, rows}) {
   return (
     <table className="my-table" >
       <colgroup>
-      <col style={{width:'250px'}} />
+      <col style={{width:'290px'}} />
       <col style={colStyle} />
       <col style={colStyle} />
       </colgroup>

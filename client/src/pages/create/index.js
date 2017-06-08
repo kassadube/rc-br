@@ -8,6 +8,7 @@ import Navbar from '../../components/navbar';
 
 const mapStateToProps = state => ({
   user: state.auth.user,
+  addStatus: state.dayActions.status,
 });
 
 const mapDispatchToProps = dispatch => ({
@@ -35,6 +36,7 @@ class Create extends Component {
   }
 
   render() {
+    console.log(this.props.addStatus);
     return (
 
       <div>
@@ -93,8 +95,10 @@ class Create extends Component {
 
 Create.propTypes = {
   user: PropTypes.object,
+  addStatus: PropTypes.string,
 };
 Create.defaultProps = {
   user: {},
+  addStatus: '',
 };
 export default connect(mapStateToProps, mapDispatchToProps)(Create);
