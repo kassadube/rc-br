@@ -17,7 +17,7 @@ export default function myTable({schema, rows}) {
     let label = item.label;
     if (!label) { label = createLabel(item.key); }
 
-    return <th key={item.key} data-key={item.key} >{label}</th>;
+    return <th key={item.key} data-key={item.key} ><a>{label}</a></th>;
   };
 
   const renderRow = (item, index) => {
@@ -29,20 +29,26 @@ export default function myTable({schema, rows}) {
     });
 
     return (
-      <tr key={`row-${rowKey}`}>
+      <tr key={`row-${rowKey}`} className={`row-${index % 2}`}>
         {cells}
       </tr>
     );
   };
   const columns = schema.map(renderColumn);
   const dataRows = rows.map((item, index) => renderRow(item, index));
+  const colStyle = {width: '220px'};
   return (
-    <table className="my-table">
+    <table className="my-table" >
+      <colgroup>
+      <col style={{width:'250px'}} />
+      <col style={colStyle} />
+      <col style={colStyle} />
+      </colgroup>
       <thead>
         <tr>
           {columns}
         </tr>
-      </thead>
+      </thead>      
       <tbody>
         {dataRows}
       </tbody>

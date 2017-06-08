@@ -18,6 +18,7 @@ import NotFound from './pages/notFound';
 import App from './app';
 import store from './store';
 import {requireAuth} from './util';
+import './css/general.css';
 
 const history = syncHistoryWithStore(browserHistory, store);
 
