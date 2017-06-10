@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import Footer from '../components/footer';
 
-export default function app({children}) {
+export default function appa({children}) {
   return (
     <div className="container">
       {children}
