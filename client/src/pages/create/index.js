@@ -96,9 +96,11 @@ class Create extends Component {
 Create.propTypes = {
   user: PropTypes.object,
   addStatus: PropTypes.string,
+  addDayClick: PropTypes.func,
 };
 Create.defaultProps = {
   user: {},
   addStatus: '',
+  addDayClick: e => e,
 };
 export default connect(mapStateToProps, mapDispatchToProps)(Create);

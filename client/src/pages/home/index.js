@@ -31,6 +31,7 @@ class Home extends Component {
    // setImmediate(() => props.getAllDayActions());
   }
   render() {
+    console.log(this.props.actions);
     return (
       <div>
         <Navbar user={this.props.user} />

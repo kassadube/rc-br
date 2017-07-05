@@ -4,9 +4,11 @@ import {chalkSuccess, chalkProcessing} from './chalkConfig';
 const path = require('path');
 const express = require('express');
 const webpack = require('webpack');
+
 const webpackMiddleware = require('webpack-dev-middleware');
 const webpackHotMiddleware = require('webpack-hot-middleware');
-const config = require('../webpack.config.dev.js');
+
+const config = require(path.join(__dirname, '../webpack.config.dev.js'));
 
 const isDeveloping = process.env.NODE_ENV !== 'production';
 const port = isDeveloping ? 3003 : process.env.PORT;
@@ -33,7 +35,8 @@ if (isDeveloping) {
   app.use(middleware);
   app.use(webpackHotMiddleware(compiler));
   app.get('*', (req, res) => {
-    res.write(middleware.fileSystem.readFileSync(path.join(__dirname, 'dist/index.html')));
+   // console.log("ff = " + path.join(__dirname, 'dist/index.html'));
+    res.write(middleware.fileSystem.readFileSync(path.join(__dirname, '../dist/index.html')));
     res.end();
   });
   open(`http://localhost:${port}/`);

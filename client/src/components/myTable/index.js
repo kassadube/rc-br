@@ -1,67 +1,67 @@
 // npm packages
-import React from 'react';
+import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import '../../css/table.css';
 
 
-export default function myTable({schema, rows}) {
-  const tr = rows.map(itemData =>
-    <td>{itemData.change}</td>,
-  );
-  const th = schema.map(itemData =>
-    <th>{itemData.label}</th>,
-  );
-  const createLabel = key => key.replace(/_/g, ' ');
+export default class MyTable extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+  createLabel = key => key.replace(/_/g, ' ');
 
-  const renderColumn = (item) => {
+  renderColumn = (item) => {
     let label = item.label;
-    if (!label) { label = createLabel(item.key); }
+    if (!label) { label = this.createLabel(item.key); }
 
     return <th key={item.key} data-key={item.key} ><a>{label}</a></th>;
   };
 
-  const renderRow = (item, index) => {
+  renderRow = (item, index) => {
     const rowKey = `ff${index}`;// item[this.props.rowIdKey];
-    const cells = schema.map((info) => {
+    const cells = this.props.schema.map((info) => {
       const value = item[info.key];
       const key = `td_${index}_${info.key}`;
       return <td key={key}>{value}</td>;
     });
 
     return (
-      <tr key={`row-${rowKey}`} className={`row-${index % 2}`}>
+      <tr key={`row-${rowKey}`} className={`row-${index % 2}`} onClick={(e) => { alert(e); }} >
         {cells}
       </tr>
     );
   };
-  const columns = schema.map(renderColumn);
-  const dataRows = rows.map((item, index) => renderRow(item, index));
-  const colStyle = {width: '220px'};
-  return (
-    <table className="my-table" >
-      <colgroup>
-      <col style={{width:'290px'}} />
-      <col style={colStyle} />
-      <col style={colStyle} />
-      </colgroup>
-      <thead>
-        <tr>
-          {columns}
-        </tr>
-      </thead>      
-      <tbody>
-        {dataRows}
-      </tbody>
-    </table>
-  );
+  render() {
+    const columns = this.props.schema.map(this.renderColumn);
+    const dataRows = this.props.rows.map((item, index) => this.renderRow(item, index));
+    const colStyle = {width: '220px'};
+    return (
+      <table className="my-table" >
+        <colgroup>
+          <col style={{width: '290px'}} />
+          <col style={colStyle} />
+          <col style={colStyle} />
+        </colgroup>
+        <thead>
+          <tr>
+            {columns}
+          </tr>
+        </thead>
+        <tbody>
+          {dataRows}
+        </tbody>
+      </table>
+    );
+  }
 }
 
 
-myTable.propTypes = {
+MyTable.propTypes = {
   schema: PropTypes.array,
   rows: PropTypes.array,
 };
-myTable.defaultProps = {
+MyTable.defaultProps = {
   schema: [],
   rows: [],
 };

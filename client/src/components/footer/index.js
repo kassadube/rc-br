@@ -13,7 +13,7 @@ const style = {
 export default () => (
   <footer style={style.footer}>
     <div className="row">
-      <div className="col-xs-11 col-sm-9 col-md-7">
+      <div className="col-xs-110 col-sm-9 col-md-7">
         this is a footeraadd
       </div>
     </div>

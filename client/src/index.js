@@ -13,7 +13,7 @@ import {syncHistoryWithStore} from 'react-router-redux';
 import Home from './pages/home';
 import Login from './pages/login';
 import Logout from './pages/logout';
-import Create from './pages/Create';
+import Create from './pages/create';
 import NotFound from './pages/notFound';
 import App from './app';
 import store from './store';
